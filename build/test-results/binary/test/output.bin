@@ -1,0 +1,113 @@
+jacksonSerialize
+gsonDeserialize
+Z{
+	"field_number": 0,
+	"field_string": null,
+	"field_object": null,
+	"field_map": null
+}
+orgJsonSerialize
+—{"field_number":1,"field_object":{"objectNumber":1,"objectString":"qwerty"},"field_map":{"mapString":"qwerty","mapNumber":1},"field_string":"qwerty"}
+—{"field_number":1,"field_object":{"objectNumber":1,"objectString":"qwerty"},"field_map":{"mapString":"qwerty","mapNumber":1},"field_string":"qwerty"}
+—{"field_number":1,"field_object":{"objectNumber":1,"objectString":"qwerty"},"field_map":{"mapString":"qwerty","mapNumber":1},"field_string":"qwerty"}
+—{"field_number":1,"field_object":{"objectNumber":1,"objectString":"qwerty"},"field_map":{"mapString":"qwerty","mapNumber":1},"field_string":"qwerty"}
+—{"field_number":1,"field_object":{"objectNumber":1,"objectString":"qwerty"},"field_map":{"mapString":"qwerty","mapNumber":1},"field_string":"qwerty"}
+gsonSerialize
+jacksonDeserialize
+¼{
+	"field_number": 1,
+	"field_string": qwerty,
+	"field_object": {
+		"field_number": 1,
+		"field_string": "qwerty"
+	},
+	"field_map": {
+		"field_string": qwerty,
+		"field_number": "1"
+	}
+}
+¼{
+	"field_number": 1,
+	"field_string": qwerty,
+	"field_object": {
+		"field_number": 1,
+		"field_string": "qwerty"
+	},
+	"field_map": {
+		"field_string": qwerty,
+		"field_number": "1"
+	}
+}
+¼{
+	"field_number": 1,
+	"field_string": qwerty,
+	"field_object": {
+		"field_number": 1,
+		"field_string": "qwerty"
+	},
+	"field_map": {
+		"field_string": qwerty,
+		"field_number": "1"
+	}
+}
+¼{
+	"field_number": 1,
+	"field_string": qwerty,
+	"field_object": {
+		"field_number": 1,
+		"field_string": "qwerty"
+	},
+	"field_map": {
+		"field_string": qwerty,
+		"field_number": "1"
+	}
+}
+orgJsonDeserialize
+¼{
+	"field_number": 1,
+	"field_string": qwerty,
+	"field_object": {
+		"field_number": 1,
+		"field_string": "qwerty"
+	},
+	"field_map": {
+		"field_string": qwerty,
+		"field_number": "1"
+	}
+}
+¼{
+	"field_number": 1,
+	"field_string": qwerty,
+	"field_object": {
+		"field_number": 1,
+		"field_string": "qwerty"
+	},
+	"field_map": {
+		"field_string": qwerty,
+		"field_number": "1"
+	}
+}
+¼{
+	"field_number": 1,
+	"field_string": qwerty,
+	"field_object": {
+		"field_number": 1,
+		"field_string": "qwerty"
+	},
+	"field_map": {
+		"field_string": qwerty,
+		"field_number": "1"
+	}
+}
+¼{
+	"field_number": 1,
+	"field_string": qwerty,
+	"field_object": {
+		"field_number": 1,
+		"field_string": "qwerty"
+	},
+	"field_map": {
+		"field_string": qwerty,
+		"field_number": "1"
+	}
+}
