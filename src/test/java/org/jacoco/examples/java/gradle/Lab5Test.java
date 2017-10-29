@@ -5,6 +5,8 @@
  */
 package org.jacoco.examples.java.gradle;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import java.io.IOException;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -27,8 +29,10 @@ public class Lab5Test {
     
     private final Lab5 labClass = new Lab5();
     private final SerializingObject so = new SerializingObject("qwerty", 1);
+    
+    
     @Test
-    public void testMetricsOfMethods(){
+    public void testMetricsOfMethods() throws JsonProcessingException, IOException{
         System.out.println("\nMETRICS_GSONdeserialize");
         Metrics.start();
         labClass.gsonDeSerialize(jsonString);
@@ -123,7 +127,7 @@ public class Lab5Test {
      * Test of jacksonDeSerialize method, of class Lab5.
      */
     @Test
-    public void testJacksonDeSerialize() {
+    public void testJacksonDeSerialize() throws IOException {
         labClass.setJsonString(jsonString);
         System.out.println("jacksonDeserialize");
         assertEquals("FieldNumbers aren't equal", 1, labClass.jacksonDeSerialize(jsonString).getFieldNumber());
@@ -138,7 +142,7 @@ public class Lab5Test {
      * Test of jacksonSerialize method, of class Lab5.
      */
     @Test
-    public void testJacksonSerialize() {
+    public void testJacksonSerialize() throws JsonProcessingException {
         System.out.println("jacksonSerialize");
         assertTrue("FieldNumbers aren't equal", labClass.jacksonSerialize(so).contains("\\\"field_number\\\": 1"));
         assertTrue("FieldStrings aren't equal", labClass.jacksonSerialize(so).contains("\\\"field_string\\\": qwerty"));
