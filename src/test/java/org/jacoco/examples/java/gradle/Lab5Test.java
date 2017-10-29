@@ -25,9 +25,8 @@ public class Lab5Test {
                     "\t}\n" +
                     "}";
     
-    Lab5 labClass = new Lab5();
-    SerializingObject so = new SerializingObject("qwerty", 1);
-    Metrics metrics = new Metrics();
+    private final Lab5 labClass = new Lab5();
+    private final SerializingObject so = new SerializingObject("qwerty", 1);
     @Test
     public void testMetricsOfMethods(){
         System.out.println("\nMETRICS_GSONdeserialize");

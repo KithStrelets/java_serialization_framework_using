@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.jacoco.examples.java.gradle.Lab5Test" tests="7" skipped="0" failures="0" errors="0" timestamp="2017-10-29T13:06:37" hostname="TOSH" time="1.336">
+<testsuite name="org.jacoco.examples.java.gradle.Lab5Test" tests="7" skipped="0" failures="0" errors="0" timestamp="2017-10-29T13:27:40" hostname="TOSH" time="1.409">
   <properties/>
-  <testcase name="testJacksonSerialize" classname="org.jacoco.examples.java.gradle.Lab5Test" time="0.056"/>
-  <testcase name="testGsonDeSerialize" classname="org.jacoco.examples.java.gradle.Lab5Test" time="0.057"/>
-  <testcase name="testOrgJsonSerialize" classname="org.jacoco.examples.java.gradle.Lab5Test" time="0.156"/>
-  <testcase name="testGsonSerialize" classname="org.jacoco.examples.java.gradle.Lab5Test" time="0.173"/>
-  <testcase name="testJacksonDeSerialize" classname="org.jacoco.examples.java.gradle.Lab5Test" time="0.412"/>
-  <testcase name="testMetricsOfMethods" classname="org.jacoco.examples.java.gradle.Lab5Test" time="0.472"/>
-  <testcase name="testOrgJsonDeserialize" classname="org.jacoco.examples.java.gradle.Lab5Test" time="0.004"/>
+  <testcase name="testJacksonSerialize" classname="org.jacoco.examples.java.gradle.Lab5Test" time="0.17"/>
+  <testcase name="testGsonDeSerialize" classname="org.jacoco.examples.java.gradle.Lab5Test" time="0.055"/>
+  <testcase name="testOrgJsonSerialize" classname="org.jacoco.examples.java.gradle.Lab5Test" time="0.011"/>
+  <testcase name="testGsonSerialize" classname="org.jacoco.examples.java.gradle.Lab5Test" time="0.13"/>
+  <testcase name="testJacksonDeSerialize" classname="org.jacoco.examples.java.gradle.Lab5Test" time="0.44"/>
+  <testcase name="testMetricsOfMethods" classname="org.jacoco.examples.java.gradle.Lab5Test" time="0.583"/>
+  <testcase name="testOrgJsonDeserialize" classname="org.jacoco.examples.java.gradle.Lab5Test" time="0.011"/>
   <system-out><![CDATA[jacksonSerialize
 "{\n\t\"field_number\": 1,\n\t\"field_string\": qwerty,\n\t\"field_object\": {\n\t\t\"field_number\": 1,\n\t\t\"field_string\": \"qwerty\"\n\t},\n\t\"field_map\": {field_number=1, field_string=qwerty}\n}"
 "{\n\t\"field_number\": 1,\n\t\"field_string\": qwerty,\n\t\"field_object\": {\n\t\t\"field_number\": 1,\n\t\t\"field_string\": \"qwerty\"\n\t},\n\t\"field_map\": {field_number=1, field_string=qwerty}\n}"
@@ -144,13 +144,13 @@ METRICS_GSONdeserialize
 	},
 	"field_map": {field_number=1, field_string=qwerty}
 }
-Execution time: 53ms
-Used memory: 5.85mb
+Execution time: 154ms
+Used memory: 5.82mb
 
 METRICS_GSONserialize
 {"field_string":"qwerty","field_number":1,"field_object":{"field_string":"qwerty","field_number":1},"field_map":{"field_number":1,"field_string":"qwerty"}}
-Execution time: 76ms
-Used memory: 5.84mb
+Execution time: 48ms
+Used memory: 5.62mb
 
 METRICS_JSONdeserialize
 {
@@ -162,13 +162,13 @@ METRICS_JSONdeserialize
 	},
 	"field_map": {field_number=1, field_string=qwerty}
 }
-Execution time: 28ms
-Used memory: 5.85mb
+Execution time: 33ms
+Used memory: 5.84mb
 
 METRICS_JSONserialize
 {"field_number":1,"field_object":{"objectNumber":1,"objectString":"qwerty"},"field_map":{"field_number":1,"field_string":"qwerty"},"field_string":"qwerty"}
-Execution time: 27ms
-Used memory: 5.84mb
+Execution time: 23ms
+Used memory: 5.63mb
 
 METRICS_JACKSONdeserialize
 {
@@ -180,13 +180,13 @@ METRICS_JACKSONdeserialize
 	},
 	"field_map": {field_number=1, field_string=qwerty}
 }
-Execution time: 55ms
-Used memory: 5.65mb
+Execution time: 75ms
+Used memory: 5.85mb
 
 METRICS_JACKSONserialize
 "{\n\t\"field_number\": 1,\n\t\"field_string\": qwerty,\n\t\"field_object\": {\n\t\t\"field_number\": 1,\n\t\t\"field_string\": \"qwerty\"\n\t},\n\t\"field_map\": {field_number=1, field_string=qwerty}\n}"
-Execution time: 34ms
-Used memory: 5.45mb
+Execution time: 28ms
+Used memory: 5.87mb
 orgJsonDeserialize
 {
 	"field_number": 1,
