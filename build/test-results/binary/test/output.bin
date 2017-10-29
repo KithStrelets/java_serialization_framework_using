@@ -134,13 +134,13 @@ METRICS_GSONdeserialize
 	},
 	"field_map": {field_number=1, field_string=qwerty}
 }
-Execution time: 82ms
-,Used memory: 5.83mb
+Execution time: 106ms
+,Used memory: 5.82mb
 
 METRICS_GSONserialize
 ù{"field_string":"qwerty","field_number":1,"field_object":{"field_string":"qwerty","field_number":1},"field_map":{"field_number":1,"field_string":"qwerty"}}
-Execution time: 46ms
-.Used memory: 5.83mb
+Execution time: 33ms
+.Used memory: 5.41mb
 
 METRICS_JSONdeserialize
 ≠{
@@ -153,12 +153,12 @@ METRICS_JSONdeserialize
 	"field_map": {field_number=1, field_string=qwerty}
 }
 Execution time: 36ms
-,Used memory: 5.84mb
+,Used memory: 5.85mb
 
 METRICS_JSONserialize
 ù{"field_number":1,"field_object":{"objectNumber":1,"objectString":"qwerty"},"field_map":{"field_number":1,"field_string":"qwerty"},"field_string":"qwerty"}
-Execution time: 28ms
-1Used memory: 5.84mb
+Execution time: 31ms
+1Used memory: 5.63mb
 
 METRICS_JACKSONdeserialize
 ≠{
@@ -170,13 +170,13 @@ METRICS_JACKSONdeserialize
 	},
 	"field_map": {field_number=1, field_string=qwerty}
 }
-Execution time: 68ms
-/Used memory: 5.85mb
+Execution time: 67ms
+/Used memory: 5.65mb
 
 METRICS_JACKSONserialize
 Œ"{\n\t\"field_number\": 1,\n\t\"field_string\": qwerty,\n\t\"field_object\": {\n\t\t\"field_number\": 1,\n\t\t\"field_string\": \"qwerty\"\n\t},\n\t\"field_map\": {field_number=1, field_string=qwerty}\n}"
-Execution time: 32ms
-Used memory: 5.66mb
+Execution time: 36ms
+Used memory: 7.17mb
 orgJsonDeserialize
 ≠{
 	"field_number": 1,
