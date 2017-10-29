@@ -1,113 +1,234 @@
 jacksonSerialize
+Œ"{\n\t\"field_number\": 1,\n\t\"field_string\": qwerty,\n\t\"field_object\": {\n\t\t\"field_number\": 1,\n\t\t\"field_string\": \"qwerty\"\n\t},\n\t\"field_map\": {field_number=1, field_string=qwerty}\n}"
+Œ"{\n\t\"field_number\": 1,\n\t\"field_string\": qwerty,\n\t\"field_object\": {\n\t\t\"field_number\": 1,\n\t\t\"field_string\": \"qwerty\"\n\t},\n\t\"field_map\": {field_number=1, field_string=qwerty}\n}"
+Œ"{\n\t\"field_number\": 1,\n\t\"field_string\": qwerty,\n\t\"field_object\": {\n\t\t\"field_number\": 1,\n\t\t\"field_string\": \"qwerty\"\n\t},\n\t\"field_map\": {field_number=1, field_string=qwerty}\n}"
+Œ"{\n\t\"field_number\": 1,\n\t\"field_string\": qwerty,\n\t\"field_object\": {\n\t\t\"field_number\": 1,\n\t\t\"field_string\": \"qwerty\"\n\t},\n\t\"field_map\": {field_number=1, field_string=qwerty}\n}"
 gsonDeserialize
-Z{
-	"field_number": 0,
-	"field_string": null,
-	"field_object": null,
-	"field_map": null
+≠{
+	"field_number": 1,
+	"field_string": qwerty,
+	"field_object": {
+		"field_number": 1,
+		"field_string": "qwerty"
+	},
+	"field_map": {field_number=1, field_string=qwerty}
+}
+≠{
+	"field_number": 1,
+	"field_string": qwerty,
+	"field_object": {
+		"field_number": 1,
+		"field_string": "qwerty"
+	},
+	"field_map": {field_number=1, field_string=qwerty}
+}
+≠{
+	"field_number": 1,
+	"field_string": qwerty,
+	"field_object": {
+		"field_number": 1,
+		"field_string": "qwerty"
+	},
+	"field_map": {field_number=1, field_string=qwerty}
+}
+≠{
+	"field_number": 1,
+	"field_string": qwerty,
+	"field_object": {
+		"field_number": 1,
+		"field_string": "qwerty"
+	},
+	"field_map": {field_number=1, field_string=qwerty}
+}
+≠{
+	"field_number": 1,
+	"field_string": qwerty,
+	"field_object": {
+		"field_number": 1,
+		"field_string": "qwerty"
+	},
+	"field_map": {field_number=1, field_string=qwerty}
+}
+≠{
+	"field_number": 1,
+	"field_string": qwerty,
+	"field_object": {
+		"field_number": 1,
+		"field_string": "qwerty"
+	},
+	"field_map": {field_number=1, field_string=qwerty}
 }
 orgJsonSerialize
-ó{"field_number":1,"field_object":{"objectNumber":1,"objectString":"qwerty"},"field_map":{"mapString":"qwerty","mapNumber":1},"field_string":"qwerty"}
-ó{"field_number":1,"field_object":{"objectNumber":1,"objectString":"qwerty"},"field_map":{"mapString":"qwerty","mapNumber":1},"field_string":"qwerty"}
-ó{"field_number":1,"field_object":{"objectNumber":1,"objectString":"qwerty"},"field_map":{"mapString":"qwerty","mapNumber":1},"field_string":"qwerty"}
-ó{"field_number":1,"field_object":{"objectNumber":1,"objectString":"qwerty"},"field_map":{"mapString":"qwerty","mapNumber":1},"field_string":"qwerty"}
-ó{"field_number":1,"field_object":{"objectNumber":1,"objectString":"qwerty"},"field_map":{"mapString":"qwerty","mapNumber":1},"field_string":"qwerty"}
+ù{"field_number":1,"field_object":{"objectNumber":1,"objectString":"qwerty"},"field_map":{"field_number":1,"field_string":"qwerty"},"field_string":"qwerty"}
+ù{"field_number":1,"field_object":{"objectNumber":1,"objectString":"qwerty"},"field_map":{"field_number":1,"field_string":"qwerty"},"field_string":"qwerty"}
+ù{"field_number":1,"field_object":{"objectNumber":1,"objectString":"qwerty"},"field_map":{"field_number":1,"field_string":"qwerty"},"field_string":"qwerty"}
+ù{"field_number":1,"field_object":{"objectNumber":1,"objectString":"qwerty"},"field_map":{"field_number":1,"field_string":"qwerty"},"field_string":"qwerty"}
 gsonSerialize
+ù{"field_string":"qwerty","field_number":1,"field_object":{"field_string":"qwerty","field_number":1},"field_map":{"field_number":1,"field_string":"qwerty"}}
+ù{"field_string":"qwerty","field_number":1,"field_object":{"field_string":"qwerty","field_number":1},"field_map":{"field_number":1,"field_string":"qwerty"}}
+ù{"field_string":"qwerty","field_number":1,"field_object":{"field_string":"qwerty","field_number":1},"field_map":{"field_number":1,"field_string":"qwerty"}}
+ù{"field_string":"qwerty","field_number":1,"field_object":{"field_string":"qwerty","field_number":1},"field_map":{"field_number":1,"field_string":"qwerty"}}
 jacksonDeserialize
-º{
+≠{
 	"field_number": 1,
 	"field_string": qwerty,
 	"field_object": {
 		"field_number": 1,
 		"field_string": "qwerty"
 	},
-	"field_map": {
-		"field_string": qwerty,
-		"field_number": "1"
-	}
+	"field_map": {field_number=1, field_string=qwerty}
 }
-º{
+≠{
 	"field_number": 1,
 	"field_string": qwerty,
 	"field_object": {
 		"field_number": 1,
 		"field_string": "qwerty"
 	},
-	"field_map": {
-		"field_string": qwerty,
-		"field_number": "1"
-	}
+	"field_map": {field_number=1, field_string=qwerty}
 }
-º{
+≠{
 	"field_number": 1,
 	"field_string": qwerty,
 	"field_object": {
 		"field_number": 1,
 		"field_string": "qwerty"
 	},
-	"field_map": {
-		"field_string": qwerty,
-		"field_number": "1"
-	}
+	"field_map": {field_number=1, field_string=qwerty}
 }
-º{
+≠{
 	"field_number": 1,
 	"field_string": qwerty,
 	"field_object": {
 		"field_number": 1,
 		"field_string": "qwerty"
 	},
-	"field_map": {
-		"field_string": qwerty,
-		"field_number": "1"
-	}
+	"field_map": {field_number=1, field_string=qwerty}
 }
-orgJsonDeserialize
-º{
+≠{
 	"field_number": 1,
 	"field_string": qwerty,
 	"field_object": {
 		"field_number": 1,
 		"field_string": "qwerty"
 	},
-	"field_map": {
-		"field_string": qwerty,
-		"field_number": "1"
-	}
+	"field_map": {field_number=1, field_string=qwerty}
 }
-º{
+≠{
 	"field_number": 1,
 	"field_string": qwerty,
 	"field_object": {
 		"field_number": 1,
 		"field_string": "qwerty"
 	},
-	"field_map": {
-		"field_string": qwerty,
-		"field_number": "1"
-	}
+	"field_map": {field_number=1, field_string=qwerty}
 }
-º{
+
+METRICS_GSONdeserialize
+≠{
 	"field_number": 1,
 	"field_string": qwerty,
 	"field_object": {
 		"field_number": 1,
 		"field_string": "qwerty"
 	},
-	"field_map": {
-		"field_string": qwerty,
-		"field_number": "1"
-	}
+	"field_map": {field_number=1, field_string=qwerty}
 }
-º{
+Execution time: 53ms
+,Used memory: 5.85mb
+
+METRICS_GSONserialize
+ù{"field_string":"qwerty","field_number":1,"field_object":{"field_string":"qwerty","field_number":1},"field_map":{"field_number":1,"field_string":"qwerty"}}
+Execution time: 76ms
+.Used memory: 5.84mb
+
+METRICS_JSONdeserialize
+≠{
 	"field_number": 1,
 	"field_string": qwerty,
 	"field_object": {
 		"field_number": 1,
 		"field_string": "qwerty"
 	},
-	"field_map": {
-		"field_string": qwerty,
-		"field_number": "1"
-	}
+	"field_map": {field_number=1, field_string=qwerty}
+}
+Execution time: 28ms
+,Used memory: 5.85mb
+
+METRICS_JSONserialize
+ù{"field_number":1,"field_object":{"objectNumber":1,"objectString":"qwerty"},"field_map":{"field_number":1,"field_string":"qwerty"},"field_string":"qwerty"}
+Execution time: 27ms
+1Used memory: 5.84mb
+
+METRICS_JACKSONdeserialize
+≠{
+	"field_number": 1,
+	"field_string": qwerty,
+	"field_object": {
+		"field_number": 1,
+		"field_string": "qwerty"
+	},
+	"field_map": {field_number=1, field_string=qwerty}
+}
+Execution time: 55ms
+/Used memory: 5.65mb
+
+METRICS_JACKSONserialize
+Œ"{\n\t\"field_number\": 1,\n\t\"field_string\": qwerty,\n\t\"field_object\": {\n\t\t\"field_number\": 1,\n\t\t\"field_string\": \"qwerty\"\n\t},\n\t\"field_map\": {field_number=1, field_string=qwerty}\n}"
+Execution time: 34ms
+Used memory: 5.45mb
+orgJsonDeserialize
+≠{
+	"field_number": 1,
+	"field_string": qwerty,
+	"field_object": {
+		"field_number": 1,
+		"field_string": "qwerty"
+	},
+	"field_map": {field_number=1, field_string=qwerty}
+}
+≠{
+	"field_number": 1,
+	"field_string": qwerty,
+	"field_object": {
+		"field_number": 1,
+		"field_string": "qwerty"
+	},
+	"field_map": {field_number=1, field_string=qwerty}
+}
+≠{
+	"field_number": 1,
+	"field_string": qwerty,
+	"field_object": {
+		"field_number": 1,
+		"field_string": "qwerty"
+	},
+	"field_map": {field_number=1, field_string=qwerty}
+}
+≠{
+	"field_number": 1,
+	"field_string": qwerty,
+	"field_object": {
+		"field_number": 1,
+		"field_string": "qwerty"
+	},
+	"field_map": {field_number=1, field_string=qwerty}
+}
+≠{
+	"field_number": 1,
+	"field_string": qwerty,
+	"field_object": {
+		"field_number": 1,
+		"field_string": "qwerty"
+	},
+	"field_map": {field_number=1, field_string=qwerty}
+}
+≠{
+	"field_number": 1,
+	"field_string": qwerty,
+	"field_object": {
+		"field_number": 1,
+		"field_string": "qwerty"
+	},
+	"field_map": {field_number=1, field_string=qwerty}
 }

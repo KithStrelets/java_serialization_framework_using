@@ -23,13 +23,13 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">6</div>
+<div class="counter">7</div>
 <p>tests</p>
 </div>
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">3</div>
+<div class="counter">0</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">1.264s</div>
+<div class="counter">1.330s</div>
 <p>duration</p>
 </div>
 </td>
@@ -50,8 +50,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox failures" id="successRate">
-<div class="percent">50%</div>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
 <p>successful</p>
 </div>
 </td>
@@ -61,213 +61,13 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Failed tests</a>
+<a href="#tab0">Tests</a>
 </li>
 <li>
-<a href="#tab1">Tests</a>
-</li>
-<li>
-<a href="#tab2">Standard output</a>
+<a href="#tab1">Standard output</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
-<h2>Failed tests</h2>
-<div class="test">
-<a name="testGsonDeSerialize"></a>
-<h3 class="failures">testGsonDeSerialize</h3>
-<span class="code">
-<pre>java.lang.AssertionError: Err expected:&lt;1&gt; but was:&lt;0&gt;
-	at org.junit.Assert.fail(Assert.java:88)
-	at org.junit.Assert.failNotEquals(Assert.java:834)
-	at org.junit.Assert.assertEquals(Assert.java:645)
-	at org.jacoco.examples.java.gradle.Lab5Test.testGsonDeSerialize(Lab5Test.java:72)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.runTestClass(JUnitTestClassExecuter.java:112)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.execute(JUnitTestClassExecuter.java:56)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassProcessor.processTestClass(JUnitTestClassProcessor.java:66)
-	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
-	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.messaging.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
-	at org.gradle.messaging.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
-	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:109)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
-	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.messaging.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:364)
-	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:54)
-	at org.gradle.internal.concurrent.StoppableExecutorImpl$1.run(StoppableExecutorImpl.java:40)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-</pre>
-</span>
-</div>
-<div class="test">
-<a name="testGsonSerialize"></a>
-<h3 class="failures">testGsonSerialize</h3>
-<span class="code">
-<pre>org.junit.ComparisonFailure: Err expected:&lt;{[
-&quot;field_number&quot;: 1,
-	&quot;field_string&quot;: &quot;qwerty&quot;,
-	&quot;field_object&quot;: {
-		&quot;field_number&quot;: 1,
-		&quot;field_string&quot;: &quot;qwerty&quot;
-	},
-	&quot;field_map&quot;: {
-		&quot;field_string&quot;: &quot;qwerty&quot;,
-		&quot;field_number&quot;: 1
-	}
-]}&gt; but was:&lt;{[&quot;fieldString&quot;:&quot;qwerty&quot;,&quot;fieldNumber&quot;:1,&quot;fieldObject&quot;:{&quot;objectString&quot;:&quot;qwerty&quot;,&quot;objectNumber&quot;:1},&quot;fieldMap&quot;:{&quot;mapString&quot;:&quot;qwerty&quot;,&quot;mapNumber&quot;:1}]}&gt;
-	at org.junit.Assert.assertEquals(Assert.java:115)
-	at org.jacoco.examples.java.gradle.Lab5Test.testGsonSerialize(Lab5Test.java:85)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.runTestClass(JUnitTestClassExecuter.java:112)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.execute(JUnitTestClassExecuter.java:56)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassProcessor.processTestClass(JUnitTestClassProcessor.java:66)
-	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
-	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.messaging.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
-	at org.gradle.messaging.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
-	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:109)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
-	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.messaging.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:364)
-	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:54)
-	at org.gradle.internal.concurrent.StoppableExecutorImpl$1.run(StoppableExecutorImpl.java:40)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-</pre>
-</span>
-</div>
-<div class="test">
-<a name="testJacksonSerialize"></a>
-<h3 class="failures">testJacksonSerialize</h3>
-<span class="code">
-<pre>org.junit.ComparisonFailure: Err expected:&lt;{
-[&quot;field_number&quot;: 1,
-	&quot;field_string&quot;: &quot;qwerty&quot;,
-	&quot;field_object&quot;: {
-		&quot;field_number&quot;: 1,
-		&quot;field_string&quot;: &quot;qwerty&quot;
-	},
-	&quot;field_map&quot;: {
-		&quot;field_string&quot;: &quot;qwerty&quot;,
-		&quot;field_number&quot;: 1]
-	}
-}&gt; but was:&lt;{
-[	&quot;field_number&quot;: 1,
-	&quot;field_string&quot;: qwerty,
-	&quot;field_object&quot;: {
-		&quot;field_number&quot;: 1,
-		&quot;field_string&quot;: &quot;qwerty&quot;
-	},
-	&quot;field_map&quot;: {
-		&quot;field_string&quot;: qwerty,
-		&quot;field_number&quot;: &quot;1&quot;]
-	}
-}&gt;
-	at org.junit.Assert.assertEquals(Assert.java:115)
-	at org.jacoco.examples.java.gradle.Lab5Test.testJacksonSerialize(Lab5Test.java:119)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.runTestClass(JUnitTestClassExecuter.java:112)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.execute(JUnitTestClassExecuter.java:56)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassProcessor.processTestClass(JUnitTestClassProcessor.java:66)
-	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
-	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.messaging.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
-	at org.gradle.messaging.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
-	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:109)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
-	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.messaging.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:364)
-	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:54)
-	at org.gradle.internal.concurrent.StoppableExecutorImpl$1.run(StoppableExecutorImpl.java:40)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-</pre>
-</span>
-</div>
-</div>
-<div id="tab1" class="tab">
 <h2>Tests</h2>
 <table>
 <thead>
@@ -278,55 +78,115 @@
 </tr>
 </thead>
 <tr>
-<td class="failures">testGsonDeSerialize</td>
-<td>0.179s</td>
-<td class="failures">failed</td>
-</tr>
-<tr>
-<td class="failures">testGsonSerialize</td>
-<td>0.136s</td>
-<td class="failures">failed</td>
-</tr>
-<tr>
-<td class="success">testJacksonDeSerialize</td>
-<td>0.720s</td>
+<td class="success">testGsonDeSerialize</td>
+<td>0.057s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="failures">testJacksonSerialize</td>
-<td>0.178s</td>
-<td class="failures">failed</td>
+<td class="success">testGsonSerialize</td>
+<td>0.173s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testJacksonDeSerialize</td>
+<td>0.412s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testJacksonSerialize</td>
+<td>0.056s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testMetricsOfMethods</td>
+<td>0.472s</td>
+<td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testOrgJsonDeserialize</td>
-<td>0.016s</td>
+<td>0.004s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testOrgJsonSerialize</td>
-<td>0.035s</td>
+<td>0.156s</td>
 <td class="success">passed</td>
 </tr>
 </table>
 </div>
-<div id="tab2" class="tab">
+<div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
 <pre>jacksonSerialize
+&quot;{\n\t\&quot;field_number\&quot;: 1,\n\t\&quot;field_string\&quot;: qwerty,\n\t\&quot;field_object\&quot;: {\n\t\t\&quot;field_number\&quot;: 1,\n\t\t\&quot;field_string\&quot;: \&quot;qwerty\&quot;\n\t},\n\t\&quot;field_map\&quot;: {field_number=1, field_string=qwerty}\n}&quot;
+&quot;{\n\t\&quot;field_number\&quot;: 1,\n\t\&quot;field_string\&quot;: qwerty,\n\t\&quot;field_object\&quot;: {\n\t\t\&quot;field_number\&quot;: 1,\n\t\t\&quot;field_string\&quot;: \&quot;qwerty\&quot;\n\t},\n\t\&quot;field_map\&quot;: {field_number=1, field_string=qwerty}\n}&quot;
+&quot;{\n\t\&quot;field_number\&quot;: 1,\n\t\&quot;field_string\&quot;: qwerty,\n\t\&quot;field_object\&quot;: {\n\t\t\&quot;field_number\&quot;: 1,\n\t\t\&quot;field_string\&quot;: \&quot;qwerty\&quot;\n\t},\n\t\&quot;field_map\&quot;: {field_number=1, field_string=qwerty}\n}&quot;
+&quot;{\n\t\&quot;field_number\&quot;: 1,\n\t\&quot;field_string\&quot;: qwerty,\n\t\&quot;field_object\&quot;: {\n\t\t\&quot;field_number\&quot;: 1,\n\t\t\&quot;field_string\&quot;: \&quot;qwerty\&quot;\n\t},\n\t\&quot;field_map\&quot;: {field_number=1, field_string=qwerty}\n}&quot;
 gsonDeserialize
 {
-	&quot;field_number&quot;: 0,
-	&quot;field_string&quot;: null,
-	&quot;field_object&quot;: null,
-	&quot;field_map&quot;: null
+	&quot;field_number&quot;: 1,
+	&quot;field_string&quot;: qwerty,
+	&quot;field_object&quot;: {
+		&quot;field_number&quot;: 1,
+		&quot;field_string&quot;: &quot;qwerty&quot;
+	},
+	&quot;field_map&quot;: {field_number=1, field_string=qwerty}
+}
+{
+	&quot;field_number&quot;: 1,
+	&quot;field_string&quot;: qwerty,
+	&quot;field_object&quot;: {
+		&quot;field_number&quot;: 1,
+		&quot;field_string&quot;: &quot;qwerty&quot;
+	},
+	&quot;field_map&quot;: {field_number=1, field_string=qwerty}
+}
+{
+	&quot;field_number&quot;: 1,
+	&quot;field_string&quot;: qwerty,
+	&quot;field_object&quot;: {
+		&quot;field_number&quot;: 1,
+		&quot;field_string&quot;: &quot;qwerty&quot;
+	},
+	&quot;field_map&quot;: {field_number=1, field_string=qwerty}
+}
+{
+	&quot;field_number&quot;: 1,
+	&quot;field_string&quot;: qwerty,
+	&quot;field_object&quot;: {
+		&quot;field_number&quot;: 1,
+		&quot;field_string&quot;: &quot;qwerty&quot;
+	},
+	&quot;field_map&quot;: {field_number=1, field_string=qwerty}
+}
+{
+	&quot;field_number&quot;: 1,
+	&quot;field_string&quot;: qwerty,
+	&quot;field_object&quot;: {
+		&quot;field_number&quot;: 1,
+		&quot;field_string&quot;: &quot;qwerty&quot;
+	},
+	&quot;field_map&quot;: {field_number=1, field_string=qwerty}
+}
+{
+	&quot;field_number&quot;: 1,
+	&quot;field_string&quot;: qwerty,
+	&quot;field_object&quot;: {
+		&quot;field_number&quot;: 1,
+		&quot;field_string&quot;: &quot;qwerty&quot;
+	},
+	&quot;field_map&quot;: {field_number=1, field_string=qwerty}
 }
 orgJsonSerialize
-{&quot;field_number&quot;:1,&quot;field_object&quot;:{&quot;objectNumber&quot;:1,&quot;objectString&quot;:&quot;qwerty&quot;},&quot;field_map&quot;:{&quot;mapString&quot;:&quot;qwerty&quot;,&quot;mapNumber&quot;:1},&quot;field_string&quot;:&quot;qwerty&quot;}
-{&quot;field_number&quot;:1,&quot;field_object&quot;:{&quot;objectNumber&quot;:1,&quot;objectString&quot;:&quot;qwerty&quot;},&quot;field_map&quot;:{&quot;mapString&quot;:&quot;qwerty&quot;,&quot;mapNumber&quot;:1},&quot;field_string&quot;:&quot;qwerty&quot;}
-{&quot;field_number&quot;:1,&quot;field_object&quot;:{&quot;objectNumber&quot;:1,&quot;objectString&quot;:&quot;qwerty&quot;},&quot;field_map&quot;:{&quot;mapString&quot;:&quot;qwerty&quot;,&quot;mapNumber&quot;:1},&quot;field_string&quot;:&quot;qwerty&quot;}
-{&quot;field_number&quot;:1,&quot;field_object&quot;:{&quot;objectNumber&quot;:1,&quot;objectString&quot;:&quot;qwerty&quot;},&quot;field_map&quot;:{&quot;mapString&quot;:&quot;qwerty&quot;,&quot;mapNumber&quot;:1},&quot;field_string&quot;:&quot;qwerty&quot;}
-{&quot;field_number&quot;:1,&quot;field_object&quot;:{&quot;objectNumber&quot;:1,&quot;objectString&quot;:&quot;qwerty&quot;},&quot;field_map&quot;:{&quot;mapString&quot;:&quot;qwerty&quot;,&quot;mapNumber&quot;:1},&quot;field_string&quot;:&quot;qwerty&quot;}
+{&quot;field_number&quot;:1,&quot;field_object&quot;:{&quot;objectNumber&quot;:1,&quot;objectString&quot;:&quot;qwerty&quot;},&quot;field_map&quot;:{&quot;field_number&quot;:1,&quot;field_string&quot;:&quot;qwerty&quot;},&quot;field_string&quot;:&quot;qwerty&quot;}
+{&quot;field_number&quot;:1,&quot;field_object&quot;:{&quot;objectNumber&quot;:1,&quot;objectString&quot;:&quot;qwerty&quot;},&quot;field_map&quot;:{&quot;field_number&quot;:1,&quot;field_string&quot;:&quot;qwerty&quot;},&quot;field_string&quot;:&quot;qwerty&quot;}
+{&quot;field_number&quot;:1,&quot;field_object&quot;:{&quot;objectNumber&quot;:1,&quot;objectString&quot;:&quot;qwerty&quot;},&quot;field_map&quot;:{&quot;field_number&quot;:1,&quot;field_string&quot;:&quot;qwerty&quot;},&quot;field_string&quot;:&quot;qwerty&quot;}
+{&quot;field_number&quot;:1,&quot;field_object&quot;:{&quot;objectNumber&quot;:1,&quot;objectString&quot;:&quot;qwerty&quot;},&quot;field_map&quot;:{&quot;field_number&quot;:1,&quot;field_string&quot;:&quot;qwerty&quot;},&quot;field_string&quot;:&quot;qwerty&quot;}
 gsonSerialize
+{&quot;field_string&quot;:&quot;qwerty&quot;,&quot;field_number&quot;:1,&quot;field_object&quot;:{&quot;field_string&quot;:&quot;qwerty&quot;,&quot;field_number&quot;:1},&quot;field_map&quot;:{&quot;field_number&quot;:1,&quot;field_string&quot;:&quot;qwerty&quot;}}
+{&quot;field_string&quot;:&quot;qwerty&quot;,&quot;field_number&quot;:1,&quot;field_object&quot;:{&quot;field_string&quot;:&quot;qwerty&quot;,&quot;field_number&quot;:1},&quot;field_map&quot;:{&quot;field_number&quot;:1,&quot;field_string&quot;:&quot;qwerty&quot;}}
+{&quot;field_string&quot;:&quot;qwerty&quot;,&quot;field_number&quot;:1,&quot;field_object&quot;:{&quot;field_string&quot;:&quot;qwerty&quot;,&quot;field_number&quot;:1},&quot;field_map&quot;:{&quot;field_number&quot;:1,&quot;field_string&quot;:&quot;qwerty&quot;}}
+{&quot;field_string&quot;:&quot;qwerty&quot;,&quot;field_number&quot;:1,&quot;field_object&quot;:{&quot;field_string&quot;:&quot;qwerty&quot;,&quot;field_number&quot;:1},&quot;field_map&quot;:{&quot;field_number&quot;:1,&quot;field_string&quot;:&quot;qwerty&quot;}}
 jacksonDeserialize
 {
 	&quot;field_number&quot;: 1,
@@ -335,10 +195,7 @@ jacksonDeserialize
 		&quot;field_number&quot;: 1,
 		&quot;field_string&quot;: &quot;qwerty&quot;
 	},
-	&quot;field_map&quot;: {
-		&quot;field_string&quot;: qwerty,
-		&quot;field_number&quot;: &quot;1&quot;
-	}
+	&quot;field_map&quot;: {field_number=1, field_string=qwerty}
 }
 {
 	&quot;field_number&quot;: 1,
@@ -347,10 +204,7 @@ jacksonDeserialize
 		&quot;field_number&quot;: 1,
 		&quot;field_string&quot;: &quot;qwerty&quot;
 	},
-	&quot;field_map&quot;: {
-		&quot;field_string&quot;: qwerty,
-		&quot;field_number&quot;: &quot;1&quot;
-	}
+	&quot;field_map&quot;: {field_number=1, field_string=qwerty}
 }
 {
 	&quot;field_number&quot;: 1,
@@ -359,10 +213,7 @@ jacksonDeserialize
 		&quot;field_number&quot;: 1,
 		&quot;field_string&quot;: &quot;qwerty&quot;
 	},
-	&quot;field_map&quot;: {
-		&quot;field_string&quot;: qwerty,
-		&quot;field_number&quot;: &quot;1&quot;
-	}
+	&quot;field_map&quot;: {field_number=1, field_string=qwerty}
 }
 {
 	&quot;field_number&quot;: 1,
@@ -371,11 +222,80 @@ jacksonDeserialize
 		&quot;field_number&quot;: 1,
 		&quot;field_string&quot;: &quot;qwerty&quot;
 	},
-	&quot;field_map&quot;: {
-		&quot;field_string&quot;: qwerty,
-		&quot;field_number&quot;: &quot;1&quot;
-	}
+	&quot;field_map&quot;: {field_number=1, field_string=qwerty}
 }
+{
+	&quot;field_number&quot;: 1,
+	&quot;field_string&quot;: qwerty,
+	&quot;field_object&quot;: {
+		&quot;field_number&quot;: 1,
+		&quot;field_string&quot;: &quot;qwerty&quot;
+	},
+	&quot;field_map&quot;: {field_number=1, field_string=qwerty}
+}
+{
+	&quot;field_number&quot;: 1,
+	&quot;field_string&quot;: qwerty,
+	&quot;field_object&quot;: {
+		&quot;field_number&quot;: 1,
+		&quot;field_string&quot;: &quot;qwerty&quot;
+	},
+	&quot;field_map&quot;: {field_number=1, field_string=qwerty}
+}
+
+METRICS_GSONdeserialize
+{
+	&quot;field_number&quot;: 1,
+	&quot;field_string&quot;: qwerty,
+	&quot;field_object&quot;: {
+		&quot;field_number&quot;: 1,
+		&quot;field_string&quot;: &quot;qwerty&quot;
+	},
+	&quot;field_map&quot;: {field_number=1, field_string=qwerty}
+}
+Execution time: 53ms
+Used memory: 5.85mb
+
+METRICS_GSONserialize
+{&quot;field_string&quot;:&quot;qwerty&quot;,&quot;field_number&quot;:1,&quot;field_object&quot;:{&quot;field_string&quot;:&quot;qwerty&quot;,&quot;field_number&quot;:1},&quot;field_map&quot;:{&quot;field_number&quot;:1,&quot;field_string&quot;:&quot;qwerty&quot;}}
+Execution time: 76ms
+Used memory: 5.84mb
+
+METRICS_JSONdeserialize
+{
+	&quot;field_number&quot;: 1,
+	&quot;field_string&quot;: qwerty,
+	&quot;field_object&quot;: {
+		&quot;field_number&quot;: 1,
+		&quot;field_string&quot;: &quot;qwerty&quot;
+	},
+	&quot;field_map&quot;: {field_number=1, field_string=qwerty}
+}
+Execution time: 28ms
+Used memory: 5.85mb
+
+METRICS_JSONserialize
+{&quot;field_number&quot;:1,&quot;field_object&quot;:{&quot;objectNumber&quot;:1,&quot;objectString&quot;:&quot;qwerty&quot;},&quot;field_map&quot;:{&quot;field_number&quot;:1,&quot;field_string&quot;:&quot;qwerty&quot;},&quot;field_string&quot;:&quot;qwerty&quot;}
+Execution time: 27ms
+Used memory: 5.84mb
+
+METRICS_JACKSONdeserialize
+{
+	&quot;field_number&quot;: 1,
+	&quot;field_string&quot;: qwerty,
+	&quot;field_object&quot;: {
+		&quot;field_number&quot;: 1,
+		&quot;field_string&quot;: &quot;qwerty&quot;
+	},
+	&quot;field_map&quot;: {field_number=1, field_string=qwerty}
+}
+Execution time: 55ms
+Used memory: 5.65mb
+
+METRICS_JACKSONserialize
+&quot;{\n\t\&quot;field_number\&quot;: 1,\n\t\&quot;field_string\&quot;: qwerty,\n\t\&quot;field_object\&quot;: {\n\t\t\&quot;field_number\&quot;: 1,\n\t\t\&quot;field_string\&quot;: \&quot;qwerty\&quot;\n\t},\n\t\&quot;field_map\&quot;: {field_number=1, field_string=qwerty}\n}&quot;
+Execution time: 34ms
+Used memory: 5.45mb
 orgJsonDeserialize
 {
 	&quot;field_number&quot;: 1,
@@ -384,10 +304,7 @@ orgJsonDeserialize
 		&quot;field_number&quot;: 1,
 		&quot;field_string&quot;: &quot;qwerty&quot;
 	},
-	&quot;field_map&quot;: {
-		&quot;field_string&quot;: qwerty,
-		&quot;field_number&quot;: &quot;1&quot;
-	}
+	&quot;field_map&quot;: {field_number=1, field_string=qwerty}
 }
 {
 	&quot;field_number&quot;: 1,
@@ -396,10 +313,7 @@ orgJsonDeserialize
 		&quot;field_number&quot;: 1,
 		&quot;field_string&quot;: &quot;qwerty&quot;
 	},
-	&quot;field_map&quot;: {
-		&quot;field_string&quot;: qwerty,
-		&quot;field_number&quot;: &quot;1&quot;
-	}
+	&quot;field_map&quot;: {field_number=1, field_string=qwerty}
 }
 {
 	&quot;field_number&quot;: 1,
@@ -408,10 +322,7 @@ orgJsonDeserialize
 		&quot;field_number&quot;: 1,
 		&quot;field_string&quot;: &quot;qwerty&quot;
 	},
-	&quot;field_map&quot;: {
-		&quot;field_string&quot;: qwerty,
-		&quot;field_number&quot;: &quot;1&quot;
-	}
+	&quot;field_map&quot;: {field_number=1, field_string=qwerty}
 }
 {
 	&quot;field_number&quot;: 1,
@@ -420,10 +331,25 @@ orgJsonDeserialize
 		&quot;field_number&quot;: 1,
 		&quot;field_string&quot;: &quot;qwerty&quot;
 	},
-	&quot;field_map&quot;: {
-		&quot;field_string&quot;: qwerty,
-		&quot;field_number&quot;: &quot;1&quot;
-	}
+	&quot;field_map&quot;: {field_number=1, field_string=qwerty}
+}
+{
+	&quot;field_number&quot;: 1,
+	&quot;field_string&quot;: qwerty,
+	&quot;field_object&quot;: {
+		&quot;field_number&quot;: 1,
+		&quot;field_string&quot;: &quot;qwerty&quot;
+	},
+	&quot;field_map&quot;: {field_number=1, field_string=qwerty}
+}
+{
+	&quot;field_number&quot;: 1,
+	&quot;field_string&quot;: qwerty,
+	&quot;field_object&quot;: {
+		&quot;field_number&quot;: 1,
+		&quot;field_string&quot;: &quot;qwerty&quot;
+	},
+	&quot;field_map&quot;: {field_number=1, field_string=qwerty}
 }
 </pre>
 </span>
@@ -436,7 +362,7 @@ orgJsonDeserialize
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 2.13</a> at Oct 23, 2017 7:10:33 AM</p>
+<a href="http://www.gradle.org">Gradle 2.13</a> at Oct 29, 2017 3:06:39 PM</p>
 </div>
 </div>
 </body>

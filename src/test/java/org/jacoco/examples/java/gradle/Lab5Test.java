@@ -27,6 +27,40 @@ public class Lab5Test {
     
     Lab5 labClass = new Lab5();
     SerializingObject so = new SerializingObject("qwerty", 1);
+    Metrics metrics = new Metrics();
+    @Test
+    public void testMetricsOfMethods(){
+        System.out.println("\nMETRICS_GSONdeserialize");
+        Metrics.start();
+        labClass.gsonDeSerialize(jsonString);
+        Metrics.stop();
+        Metrics.getAllMetrics();
+        System.out.println("\nMETRICS_GSONserialize");
+        Metrics.start();
+        labClass.gsonSerialize(so);
+        Metrics.stop();
+        Metrics.getAllMetrics();
+        System.out.println("\nMETRICS_JSONdeserialize");
+        Metrics.start();
+        labClass.orgJsonDeserialize(jsonString);
+        Metrics.stop();
+        Metrics.getAllMetrics();
+        System.out.println("\nMETRICS_JSONserialize");
+        Metrics.start();
+        labClass.orgJsonSerialize(so);
+        Metrics.stop();
+        Metrics.getAllMetrics();
+        System.out.println("\nMETRICS_JACKSONdeserialize");
+        Metrics.start();
+        labClass.jacksonDeSerialize(jsonString);
+        Metrics.stop();
+        Metrics.getAllMetrics();
+        System.out.println("\nMETRICS_JACKSONserialize");
+        Metrics.start();
+        labClass.jacksonSerialize(so);
+        Metrics.stop();
+        Metrics.getAllMetrics();
+    }
     
     /**
      * Test of orgJsonDeserialize method, of class Lab5.
@@ -38,7 +72,9 @@ public class Lab5Test {
         assertEquals("FieldNumbers aren't equal", 1, labClass.orgJsonDeserialize(jsonString).getFieldNumber());
         assertEquals("FieldStrings aren't equal", "qwerty", labClass.orgJsonDeserialize(jsonString).getFieldString());
         assertEquals("FieldObjects aren't equal", so.getFieldObject().toString(), labClass.orgJsonDeserialize(jsonString).getFieldObject().toString());
-        assertEquals("FieldMaps aren't equal", so.getFieldMap().toString(), labClass.orgJsonDeserialize(jsonString).getFieldMap().toString());
+        assertEquals("FieldMaps aren't equal", so.getFieldMap(), labClass.orgJsonDeserialize(jsonString).getFieldMap());
+        assertEquals("Map strings aren't equal", "qwerty", labClass.orgJsonDeserialize(jsonString).getMapString());
+        assertEquals("Map numbers aren't equal", 1, labClass.orgJsonDeserialize(jsonString).getMapNumber());
     }
 
     /**
@@ -47,19 +83,12 @@ public class Lab5Test {
     @Test
     public void testOrgJsonSerialize() {
         System.out.println("orgJsonSerialize");
-        assertNotEquals("Err", jsonString, labClass.orgJsonSerialize(so));
-        assertFalse("FieldNumbers aren't equal", labClass.orgJsonSerialize(so).contains("\"field_number\": 1"));
-        assertFalse("FieldStrings aren't equal", labClass.orgJsonSerialize(so).contains("\"field_string\": \"qwerty\""));
-        assertFalse("FieldObjects aren't equal", labClass.orgJsonSerialize(so).contains(
-                    "\"field_object\": {\n"+
-                    "		\"field_number\": 1,\n" +
-                    "		\"field_string\": \"qwerty\"\n" +
-                    "	}"));
-        assertFalse("FieldMaps aren't equal", labClass.orgJsonSerialize(so).contains(
-                    "\"field_map\": {\n" +
-                    "		\"field_string\": \"qwerty\",\n" +
-                    "		\"field_number\": 1\n" +
-                    "	}"));
+        assertTrue("FieldNumbers aren't equal", labClass.orgJsonSerialize(so).contains("\"field_number\":1"));
+        assertTrue("FieldStrings aren't equal", labClass.orgJsonSerialize(so).contains("\"field_string\":\"qwerty\""));
+        assertTrue("FieldObjects aren't equal", labClass.orgJsonSerialize(so).contains(
+                    "\"field_object\":{\"objectNumber\":1,\"objectString\":\"qwerty\"}"));
+        assertTrue("FieldMaps aren't equal", labClass.orgJsonSerialize(so).contains(
+                    "\"field_map\":{\"field_number\":1,\"field_string\":\"qwerty\"}"));
     }
 
     /**
@@ -69,11 +98,12 @@ public class Lab5Test {
     public void testGsonDeSerialize() {
         labClass.setJsonString(jsonString);
         System.out.println("gsonDeserialize");
-        assertEquals("Err", 1, labClass.gsonDeSerialize(jsonString).getFieldNumber());
-        //assertEquals("FieldNumbers aren't equal",1,labClass.gsonDeSerialize(jsonString).getFieldNumber());
-        //assertEquals("FieldStrings aren't equal", "qwerty", labClass.gsonDeSerialize(jsonString).getFieldString());
-        //assertEquals("FieldObjects aren't equal", so.getFieldObject().toString(), labClass.gsonDeSerialize(jsonString).getFieldObject().toString());
-        //assertEquals("FieldMaps aren't equal", so.getFieldMap().toString(), labClass.gsonDeSerialize(jsonString).getFieldMap().toString());
+        assertEquals("FieldNumbers aren't equal",1,labClass.gsonDeSerialize(jsonString).getFieldNumber());
+        assertEquals("FieldStrings aren't equal", "qwerty", labClass.gsonDeSerialize(jsonString).getFieldString());
+        assertEquals("FieldObjects aren't equal", so.getFieldObject().toString(), labClass.gsonDeSerialize(jsonString).getFieldObject().toString());
+        assertEquals("FieldMaps aren't equal", so.getFieldMap(), labClass.gsonDeSerialize(jsonString).getFieldMap());
+        assertEquals("Map strings aren't equal", "qwerty", labClass.gsonDeSerialize(jsonString).getMapString());
+        assertEquals("Map numbers aren't equal", 1, labClass.gsonDeSerialize(jsonString).getMapNumber());
     }
 
     /**
@@ -82,19 +112,12 @@ public class Lab5Test {
     @Test
     public void testGsonSerialize() {
         System.out.println("gsonSerialize");
-        assertEquals("Err", jsonString, labClass.gsonSerialize(so));
-        assertTrue("FieldNumbers aren't equal", labClass.gsonSerialize(so).contains("\"field_number\": 1"));
-        assertTrue("FieldStrings aren't equal", labClass.gsonSerialize(so).contains("\"field_string\": \"qwerty\""));
+        assertTrue("FieldNumbers aren't equal", labClass.gsonSerialize(so).contains("\"field_number\":1"));
+        assertTrue("FieldStrings aren't equal", labClass.gsonSerialize(so).contains("\"field_string\":\"qwerty\""));
         assertTrue("FieldObjects aren't equal", labClass.gsonSerialize(so).contains(
-                    "\"field_object\": {\n"+
-                    "		\"field_number\": 1,\n" +
-                    "		\"field_string\": \"qwerty\"\n" +
-                    "	}"));
-        assertTrue("FieldMaps aren't equal", labClass.orgJsonSerialize(so).contains(
-                    "\"field_map\": {\n" +
-                    "		\"field_string\": \"qwerty\",\n" +
-                    "		\"field_number\": 1\n" +
-                    "	}"));
+                    "\"field_object\":{\"field_string\":\"qwerty\",\"field_number\":1}"));
+        assertTrue("FieldMaps aren't equal", labClass.gsonSerialize(so).contains(
+                    "\"field_map\":{\"field_number\":1,\"field_string\":\"qwerty\"}"));
     }
 
     /**
@@ -107,7 +130,9 @@ public class Lab5Test {
         assertEquals("FieldNumbers aren't equal", 1, labClass.jacksonDeSerialize(jsonString).getFieldNumber());
         assertEquals("FieldStrings aren't equal", "qwerty", labClass.jacksonDeSerialize(jsonString).getFieldString());
         assertEquals("FieldObjects aren't equal", so.getFieldObject().toString(), labClass.jacksonDeSerialize(jsonString).getFieldObject().toString());
-        assertEquals("FieldMaps aren't equal", so.getFieldMap().toString(), labClass.jacksonDeSerialize(jsonString).getFieldMap().toString());
+        assertEquals("FieldMaps aren't equal", so.getFieldMap(), labClass.jacksonDeSerialize(jsonString).getFieldMap());
+        assertEquals("Map strings aren't equal", "qwerty", labClass.jacksonDeSerialize(jsonString).getMapString());
+        assertEquals("Map numbers aren't equal", 1, labClass.jacksonDeSerialize(jsonString).getMapNumber());
     }
 
     /**
@@ -116,19 +141,12 @@ public class Lab5Test {
     @Test
     public void testJacksonSerialize() {
         System.out.println("jacksonSerialize");
-        assertEquals("Err", jsonString, labClass.jacksonSerialize(so).toString());
-        assertTrue("FieldNumbers aren't equal", labClass.jacksonSerialize(so).contains("\"field_number\": 1"));
-        assertTrue("FieldStrings aren't equal", labClass.jacksonSerialize(so).contains("\"field_string\": \"qwerty\""));
+        assertTrue("FieldNumbers aren't equal", labClass.jacksonSerialize(so).contains("\\\"field_number\\\": 1"));
+        assertTrue("FieldStrings aren't equal", labClass.jacksonSerialize(so).contains("\\\"field_string\\\": qwerty"));
         assertTrue("FieldObjects aren't equal", labClass.jacksonSerialize(so).contains(
-                    "\"field_object\": {\n"+
-                    "		\"field_number\": 1,\n" +
-                    "		\"field_string\": \"qwerty\"\n" +
-                    "	}"));
-        assertTrue("FieldMaps aren't equal", labClass.orgJsonSerialize(so).contains(
-                    "\"field_map\": {\n" +
-                    "		\"field_string\": \"qwerty\",\n" +
-                    "		\"field_number\": 1\n" +
-                    "	}"));
+                    "\\\"field_object\\\": {\\n\\t\\t\\\"field_number\\\": 1,\\n\\t\\t\\\"field_string\\\": \\\"qwerty\\\"\\n\\t}"));
+        assertTrue("FieldMaps aren't equal", labClass.jacksonSerialize(so).contains(
+                    "\\\"field_map\\\": {field_number=1, field_string=qwerty}"));
     }
     
 }

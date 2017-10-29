@@ -9,6 +9,10 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  *
@@ -20,44 +24,94 @@ class SerializingObject {
 
     @JsonSubTypes({
         @JsonSubTypes.Type(value = FieldObject.class, name = "field_object"),
-        @JsonSubTypes.Type(value = FieldMap.class, name = "field_map")
+        //@JsonSubTypes.Type(value = FieldMap.class, name = "field_map")
     })
-    
+   @Expose
+   @SerializedName("field_string")
    private String fieldString;
+   @Expose
+   @SerializedName("field_number")
    private int fieldNumber;
+   @Expose
+   @SerializedName("field_object")   
    private FieldObject fieldObject;
-   private FieldMap fieldMap;
+   @Expose
+   @SerializedName("field_map")   
+   private Map<String, Object> fieldMap;
+   private String mapString;
+   private int mapNumber;
    
+    public String getMapString() {
+        return mapString;
+    }
+    
+    @JsonProperty("field_map")
+    private void unpackStringFromNestedObject(Map<String, Object> FieldMap){
+        mapString = FieldMap.get("field_string").toString();
+        mapNumber = (int)FieldMap.get("field_number");
+    }
+    public void setFieldObject(FieldObject fieldObject) {
+        this.fieldObject = fieldObject;
+    }
+
+    public void setFieldMap(Map<String, Object> fieldMap) {
+        this.fieldMap = fieldMap;
+    }
+    
+    public void setMapString(String mapString) {
+        this.mapString = mapString;
+        this.fieldMap.replace("field_string", mapString);
+    }
+
+    public int getMapNumber() {
+        return mapNumber;
+    }
+
+    public void setMapNumber(int mapNumber) {
+        this.mapNumber = mapNumber;
+        this.fieldMap.replace("field_number", mapNumber);
+    }
+       
    @JsonCreator
    public SerializingObject(
       @JsonProperty("field_string") String fString, 
       @JsonProperty("field_number") int fNumber,
       @JsonProperty("field_object") FieldObject fObject,
-      @JsonProperty("field_map") FieldMap fMap){
+      @JsonProperty("field_map") HashMap<String,Object> fMap){
        fieldString = fString;
        fieldNumber = fNumber;
        fieldObject = fObject;
        fieldMap = fMap;
+       mapNumber = (int)fieldMap.get("field_number");
+       mapString = (String)fieldMap.get("field_string").toString().trim();
    }
    
    public SerializingObject(String fString, int fNumber){
-       fieldString = fString;
-       fieldNumber = fNumber;
-       fieldObject = new FieldObject();
-       fieldMap = new FieldMap();
+       fieldString = mapString = fString;
+       fieldNumber = mapNumber = fNumber;
+       fieldObject = new FieldObject(fieldString, fieldNumber);
+       fieldMap = new HashMap<String, Object>();
+       fieldMap.put("field_string", mapString);
+       fieldMap.put("field_number", mapNumber);
    }
    
    @JsonTypeName("field_object")
-   public class FieldObject{
-       
+   public static class FieldObject{
+        @Expose
+        @SerializedName("field_string")
         private final String objectString;
+        @Expose
+        @SerializedName("field_number")
         private final int objectNumber;
+        
         @JsonCreator
-        public FieldObject()
-        {
-        objectNumber = fieldNumber;
-        objectString = fieldString;
+        public FieldObject(
+                @JsonProperty("field_string")String st,
+                @JsonProperty("field_number")int num){
+        objectNumber = num;
+        objectString = st;
         }
+        
         @JsonProperty("field_string")
         public String getObjectString() {
             return objectString;
@@ -72,35 +126,8 @@ class SerializingObject {
               +",\n\t\t\"field_string\": \""+ objectString
               +"\"\n\t}";
         }
-   }
-   
-   @JsonTypeName("field_map")
-   public class FieldMap{
-        private final String mapString;
-        private final int mapNumber;
-        @JsonCreator
-        public FieldMap()
-        {
-        mapNumber = fieldNumber;
-        mapString = fieldString;
-        }
-        @JsonProperty("field_string")
-        public String getMapString() {
-            return mapString;
-        }
-        @JsonProperty("field_number")
-        public int getMapNumber() {
-            return mapNumber;
-        }
-        
-        @Override
-        public String toString(){
-            return "{\n\t\t\"field_string\": "+mapString
-              +",\n\t\t\"field_number\": \""+ mapNumber
-              +"\"\n\t}";
-        }
-   }
-   
+   } 
+
    @JsonProperty("field_string")
    public String getFieldString() {
       return fieldString;
@@ -109,6 +136,7 @@ class SerializingObject {
    public void setFieldString(String fieldString) {
       this.fieldString = fieldString;
    }
+
    @JsonProperty("field_number")	
    public int getFieldNumber() {
       return fieldNumber;
@@ -117,14 +145,16 @@ class SerializingObject {
    public void setFieldNumber(int fieldNumber) {
       this.fieldNumber = fieldNumber;
    }
+
    @JsonProperty("field_object")
    public FieldObject getFieldObject() {
       return fieldObject;
    }   
 
    @JsonProperty("field_map")
-   public FieldMap getFieldMap() {
+   public Map<String, Object> getFieldMap() {
       return fieldMap;
+      //fieldMap.values();
    }    
    
    @Override
