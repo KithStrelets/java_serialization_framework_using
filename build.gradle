@@ -33,22 +33,22 @@ jar{
 }
 
 task codeCoverageReport(type: JacocoReport) {
-	def coverageSourceDirs = [
-    'src/main/java/',
-]
+    def coverageSourceDirs = [
+            'src/main/java',
+    ]
     executionData = fileTree(project.rootDir.absolutePath).include("**/build/jacoco/*.exec")
-	classDirectories = fileTree(dir: "${project.buildDir}/classes/java/main")
-	sourceDirectories = files(coverageSourceDirs)
-	
+    classDirectories = fileTree(dir: "${project.buildDir}/classes/java/main")
+    sourceDirectories = files(coverageSourceDirs)
+
     subprojects.each {
         sourceSets it.sourceSets.main
     }
 
     reports {
-        xml.enabled true
+        xml.enabled = true
         xml.destination "${buildDir}/reports/jacoco/report.xml"
-        html.enabled false
-        csv.enabled false
+        csv.enabled = false
+        html.enabled = false
     }
 }
 
@@ -56,13 +56,15 @@ codeCoverageReport.dependsOn {
     subprojects*.task(test)
 }
 
-
 jacocoTestReport {
     reports {
-        xml.enabled true
-        html.enabled false
-        csv.enabled false
+        xml.enabled = true
+        html.enabled = false
     }
 }
 
-check.dependsOn(jacocoTestReport)
+check.dependsOn jacocoTestReport
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '4.1'
+}
