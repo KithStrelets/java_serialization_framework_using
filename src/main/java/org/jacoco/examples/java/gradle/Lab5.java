@@ -14,13 +14,9 @@ import org.json.JSONObject;
 
 
 public class Lab5 {
-    private String jsonString;        
+       
     private final ObjectMapper mapper = new ObjectMapper();
     private static final Gson GSON = new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create();
-
-    public void setJsonString(String jsonString) {
-        this.jsonString = jsonString;
-    }
 
     public SerializingObject gsonDeSerialize(String targetJsonString){
 
